@@ -1,3 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root{
+    --primary: #f08c14;
+}
+
+body{
+  font-family: 'Lato', sans-serif;
+  background-color: rgb(245, 245, 245);
+}
+
+.c-primary{
+    color:var(--primary);
+}
+
+.bg-primary{
+    background-color: var(--primary) !important;
+}
