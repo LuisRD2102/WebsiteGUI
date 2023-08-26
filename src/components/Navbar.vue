@@ -23,21 +23,6 @@
 </template>
 
 <script setup>
-
-// window.addEventListener('scroll', () => {
-//   const nav = document.querySelector('nav');
-//   const menuItems = document.querySelectorAll('nav ul li a');
-//   if (window.scrollY > 0) {
-//     nav.classList.add('bg-white-opacity-low');
-//     menuItems.forEach(item => item.classList.add('text-black'));
-//   } else {
-//     nav.classList.remove('bg-white-opacity-low');
-//     menuItems.forEach(item => item.classList.remove('text-black'));
-//   }
-// });
-
-
-
 </script>
 
 
