@@ -4,8 +4,13 @@
     <div
     class="relative h-screen overflow-hidden bg-contain bg-[50%] bg-no-repeat bg-light">
     <img
-        src="../assets/img/Landing4.png"
-        class="h-screen m-0 w-full" />
+    src="../assets/img/LandingSM.png"
+    class="h-screen m-0 w-full lg:hidden"
+    />
+    <img
+      src="../assets/img/Landing4.png"
+      class="h-screen m-0 w-full hidden lg:block"
+    />
     <div
         class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed"
         >

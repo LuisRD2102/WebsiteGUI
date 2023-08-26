@@ -91,11 +91,11 @@ const routes = [
     name: "Modal",
     component: Modal,
   },
-  // {
-  //   path: "/navbar",
-  //   name: "Navbar",
-  //   component: Navbar,
-  // },
+  {
+    path: "/login",
+    name: "LogIn",
+    component: LogIn,
+  },
 ];
 
 const router = createRouter({
