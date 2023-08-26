@@ -13,6 +13,7 @@ import Tooltip from "../components/Tooltip.vue";
 import Modal from "../components/Modal.vue";
 // import Navbar from "../components/Navbar.vue"
 import LandingPage from "../pages/LandingPage.vue"
+import LogIn from "../pages/LogIn.vue"
 // import Clients from "../pages/Clients.vue"
 
 
@@ -91,11 +92,11 @@ const routes = [
     name: "Modal",
     component: Modal,
   },
-  // {
-  //   path: "/navbar",
-  //   name: "Navbar",
-  //   component: Navbar,
-  // },
+  {
+    path: "/login",
+    name: "LogIn",
+    component: LogIn,
+  },
 ];
 
 const router = createRouter({

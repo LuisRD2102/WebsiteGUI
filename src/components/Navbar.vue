@@ -9,7 +9,7 @@
         <ul class="font-medium">
           <ul class="font-medium">
             <li class="rounded px-3 md:py-1 bg-white">
-              <a href="#" class="block py-2 pl-3 pr-4 c-primary rounded font-bold">Sign In</a>
+              <a href="/login" class="block py-2 pl-3 pr-4 c-primary rounded font-bold">Sign In</a>
             </li>
           </ul>
           
