@@ -1,0 +1,37 @@
+<template>
+  <div>
+    <div class="p-4">
+      <DataTable :items="items" :headers="headers" />
+    </div>
+  </div>
+</template>
+
+<script>
+import DataTable from '../components/DataTable.vue';
+
+export default {
+    components: {
+        DataTable
+    },
+    data() {
+        return {
+            headers: ["Id","Name","Last Name", "Phone", "Email","Status"],
+            items: []
+        };
+    },
+    created() {
+      fetch('https://randomuser.me/api/?results=50&nat=us')
+      .then(response => response.json())
+      .then(data => {
+              this.items = data.results.map(user => ({
+                  Id: user.id.value,
+                  Name: user.name.first,
+                  "Last Name": user.name.last,
+                  Phone: user.phone,
+                  Email: user.email,
+                  Status: Math.round(Math.random())
+              }))
+            });
+    }
+};
+</script>
