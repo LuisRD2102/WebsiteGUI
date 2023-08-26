@@ -2,7 +2,7 @@
     
   <nav class="border-gray-200">
     <div class="w-full flex flex-wrap items-center justify-between mx-auto p-4 px-8">
-      <a class="flex items-center">
+      <a class="flex items-center" href="/landing">
           <span class="self-center text-2xl font-semibold whitespace-nowrap c-primary">LOGO</span>
       </a>
        <div class="md:pe-3 flex justify-end" >
