@@ -13,9 +13,24 @@ import Tooltip from "../components/Tooltip.vue";
 import Modal from "../components/Modal.vue";
 import Navbar from "../components/Navbar.vue"
 import LandingPage from "../pages/LandingPage.vue"
+import Clients from "../pages/Clients.vue"
 
 
 const routes = [
+  {
+    path: '/:pathMatch(.*)*',
+    redirect: '/landing'
+  },
+  {
+    path: "/landing",
+    name: "Landing",
+    component: LandingPage,
+  },
+  {
+    path: "/clients",
+    name: "Clients",
+    component: Clients,
+  },
   {
     path: "/events",
     name: "Events",
@@ -80,11 +95,6 @@ const routes = [
     path: "/navbar",
     name: "Navbar",
     component: Navbar,
-  },
-  {
-    path: "/landing",
-    name: "Landing",
-    component: LandingPage,
   },
 ];
 

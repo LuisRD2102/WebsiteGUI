@@ -8,7 +8,7 @@
   "contributors": [
     "Zoltán Szőgyényi (https://twitter.com/zoltanszogyenyi)"
   ],
-  "author": "Bergside Inc.",
+  "author": "",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
