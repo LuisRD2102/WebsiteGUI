@@ -14,6 +14,7 @@ import Modal from "../components/Modal.vue";
 // import Navbar from "../components/Navbar.vue"
 import LandingPage from "../pages/LandingPage.vue"
 import Clients from "../pages/Clients.vue"
+import LogIn from "../pages/LogIn.vue"
 
 
 const routes = [
