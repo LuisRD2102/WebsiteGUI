@@ -13,7 +13,7 @@ import Tooltip from "../components/Tooltip.vue";
 import Modal from "../components/Modal.vue";
 import Navbar from "../components/Navbar.vue"
 import LandingPage from "../pages/LandingPage.vue"
-import Clients from "../pages/Clients.vue"
+// import Clients from "../pages/Clients.vue"
 
 
 const routes = [
@@ -26,11 +26,11 @@ const routes = [
     name: "Landing",
     component: LandingPage,
   },
-  {
-    path: "/clients",
-    name: "Clients",
-    component: Clients,
-  },
+  // {
+  //   path: "/clients",
+  //   name: "Clients",
+  //   component: Clients,
+  // },
   {
     path: "/events",
     name: "Events",
