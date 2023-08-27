@@ -33,13 +33,7 @@
             </div>
           </div>
         </div>
-        <button type="button"
-          class="flex items-center text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-3 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700">
-          <svg class="w-4 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M9 1v16M1 9h16" />
-          </svg> Add new
-        </button>
+        <Button label="Add new" icon="add" @click="addNew()"/>
       </div>
       <div class="p-1.5 w-full inline-block align-middle">
         <div class="overflow-auto border rounded-lg h-[75vh]">
@@ -117,12 +111,12 @@
 </template>
 
 <script>
-import Paginator from './Paginator.vue';
+import Paginator from '../components/Paginator.vue';
 
 export default {
   components: {
-    Paginator
-  },
+    Paginator,
+},
   props: {
     items: {
       type: Array,
@@ -161,6 +155,9 @@ export default {
     }
   },
   methods: {
+    addNew(){
+      this.$emit('add-new');
+    },
     sortTable(index) {
       if (this.sortOrder === index) {
         this.sortAsc = !this.sortAsc;
