@@ -29,7 +29,7 @@
                 animi! Sed, recusandae.
               </p>
               <div class="mt-5">
-                <Button label="Learn More"  />
+                <Button label="Learn More" @click="scrollToElement('myDiv')" class="flex items-center px-3 font-bold"/>
               </div>
 
               
@@ -42,7 +42,7 @@
     </div>
 </div>
 
-<div class="h-full w-full simple-linear">
+<div class="h-full w-full simple-linear" ref="myDiv">
   <div class="container mx-auto md:px-6">
     <section class="mb-32 text-center">
       <div class="flex justify-center">
@@ -146,7 +146,7 @@
 
 </template>
 
-<script >
+<script>
 import CardsOverlay from '../components/CardsOverlay.vue';
 import Navbar from '../components/Navbar.vue';
 import Testimonial from '../components/Testimonial.vue';
@@ -160,11 +160,18 @@ export default {
     Testimonial,
     Location,
     Footer
-},
+  },
+  methods: {
+    scrollToElement(refName) {
+      const el = this.$refs[refName];
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }
 };
-
-
 </script>
+
 
 <style>
 @keyframes move {
