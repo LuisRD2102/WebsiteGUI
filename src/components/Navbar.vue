@@ -8,11 +8,8 @@
        <div class="md:pe-3 flex justify-end" >
         <ul class="font-medium">
           <ul class="font-medium">
-            <li class="rounded px-3 bg-white">
-              <a href="/login" class="block py-2 pl-3 pr-4 c-primary rounded font-bold">Sign In</a>
-            </li>
-          </ul>
-          
+              <Button label="Sign in" class="w-full px-3 font-bold flex items-center px-6 py-1 shadow-none justify-center" :bgColorClass="$route.path === '/login' ? 'hidden' : 'bg-light c-primary'" @click="$router.push('/login')"></Button>          
+          </ul>         
         </ul>
       </div>
     </div>
@@ -22,7 +19,15 @@
   
 </template>
 
-<script setup>
+<script>
+import Button from '../components/Button.vue'
+
+export default {
+  components: {
+    Button
+  },
+};
+
 </script>
 
 
