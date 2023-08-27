@@ -38,7 +38,7 @@
 
             <div>
               <img src="../assets/img/solarpanels.jpg"
-                class="w-full rounded-lg shadow-lg dark:shadow-black/20 hidden sm:block" alt="" />
+                class="w-full rounded-lg shadow-lg dark:shadow-black/20 hidden md:block" alt="" />
             </div>
             
           </div>
@@ -72,10 +72,10 @@ export default {
         }
         axios.post('your-api-url', data, { headers })
             .then(response => {
-                // handle successful response
+                console.log(response.data);
             })
             .catch(error => {
-                // handle error
+                console.error(error);
             });
     };
 
