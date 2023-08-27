@@ -2,18 +2,16 @@
   <Navbar class="absolute top-0 left-0 right-0 z-10" />
 
   <div class="relative h-screen overflow-hidden bg-contain bg-[50%] bg-no-repeat inverse-gradient">
-    <!-- <img src="../assets/img/LandingSM.png" class="h-screen m-0 w-full lg:hidden" />
-    <img src="../assets/img/Landing4.png" class="h-screen m-0 w-full hidden lg:block" /> -->
-    <div class="container my-24 mx-auto md:px-6">
+    <div class="container my-24 pt-12 md:my-24 mx-auto md:px-6 md:pt-0">
       <section class="mb-32">
         <div class="container mx-auto text-center lg:text-left xl:px-32">
           <div class="flex grid items-center lg:grid-cols-2">
             <div class="mb-12 lg:mb-0">
               <div
                 class="block rounded-lg custom-gradient px-6 py-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-[hsla(0,0%,5%,0.55)] dark:shadow-black/20 md:px-12 lg:-mr-14 backdrop-blur-[30px]">
-                <h1 class="text-3xl font-semibold text-center c-primary">LOGO</h1>
+                <h1 class="text-3xl font-semibold text-center c-primary hidden md:block">LOGO</h1>
 
-                <div class="px-8 py-16">
+                <div class="px-8 py-12 md:py-16">
 
                   <h1 class="text-3xl font-semibold text-center pt-2">Sign in to your account</h1>
                   <form class="mt-8">
@@ -54,7 +52,6 @@
                           >Password
                         </label>
                       </div>
-                        <!-- <a href="#" class="text-xs text-gray-600 hover:underline">Forget Password?</a> -->
                         <div class="mt-6">
                             <Button label="Sign in" class="w-full"></Button>
                         </div>
@@ -73,11 +70,8 @@
             
           </div>
         </div>
-        <!-- Jumbotron -->
       </section>
-      <!-- Section: Design Block -->
     </div>
-    <!-- Container for demo purpose -->
 
   </div>
 </template>
@@ -108,10 +102,9 @@ initTE({ Input });
     transform: translateY(-926px) !important;
   }
 
-  .custom-gradient {
-    background-image: linear-gradient(to right, #f8f4f1, hsla(0,0%,100%,0.55));
-  } 
-
-
 }
+
+.custom-gradient {
+  background-image: linear-gradient(to right, #f8f4f1, hsla(0,0%,100%,0.55));
+} 
 </style>
