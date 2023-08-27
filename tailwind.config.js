@@ -11,4 +11,12 @@ module.exports = {
   plugins: [
     require('flowbite/plugin')
   ],
+  variants: {
+    extend: {
+      // Add your custom class here
+      transformMiddle: ['md'],
+    },
+  },
+
+
 }
