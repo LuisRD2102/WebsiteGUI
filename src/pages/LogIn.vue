@@ -89,14 +89,6 @@ initTE({ Input });
 
 <style>
 
-input:focus + label,
-input:active + label {
-  background-color: #f8f4f1;
-  padding-left: 0.3rem;
-  padding-right: 0.3rem;
-}
-
-
 @media (min-width: 768px) {
   .transform-middle{
     transform: translateY(-926px) !important;

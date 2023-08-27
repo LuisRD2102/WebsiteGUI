@@ -23,7 +23,7 @@ export default {
   },
   data() {
     return {
-      headers: ["Id", "Name", "Last Name", "Phone", "Email", "Status"],
+      headers: ["Id", "First name", "Last Name", "Phone", "Email", "Status"],
       items: []
     };
   },
@@ -33,7 +33,7 @@ export default {
       .then(data => {
         this.items = data.results.map(user => ({
           Id: user.id.value,
-          Name: user.name.first,
+          "First name": user.name.first,
           "Last Name": user.name.last,
           Phone: user.phone,
           Email: user.email,
