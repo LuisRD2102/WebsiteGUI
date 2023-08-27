@@ -68,9 +68,10 @@ export default {
         }
         const headers = {
             'Content-Type': 'application/x-www-form-urlencoded',
-            'Authorization':  `Basic ${import.meta.env.VUE_APP_API_KEY}`
+            'Authorization':  `Basic ${import.meta.env.VITE_APP_API_KEY}`
         }
-        axios.post(`${import.meta.env.VUE_APP_API_BASE_URL}`, data, { headers })
+
+        axios.post(`${import.meta.env.VITE_APP_API_BASE_URL}`, data, { headers })
             .then(response => {
                 console.log(response.data);
             })
