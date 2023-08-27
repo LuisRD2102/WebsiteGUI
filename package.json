@@ -15,6 +15,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "axios": "^1.5.0",
     "flowbite": "^1.6.5",
     "tw-elements": "^1.0.0-beta3",
     "vue": "^3.2.25",
