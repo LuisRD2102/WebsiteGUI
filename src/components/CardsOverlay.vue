@@ -21,7 +21,7 @@
                 <small class="text-base text-neutral-500 dark:text-neutral-300">/year</small>
               </h3>
   
-              <Button label="buy" class="w-full"></Button>
+              <Button label="BUY" class="w-full flex items-center font-bold justify-center"></Button>
             </div>
             <div class="p-6">
               <ol class="list-inside">
@@ -58,7 +58,7 @@
                 <small class="text-base text-neutral-500 dark:text-neutral-300">/year</small>
               </h3>
   
-              <Button label="buy" class="w-full"></Button>
+              <Button label="BUY" class="w-full flex items-center font-bold justify-center"></Button>
             </div>
             <div class="p-6">
               <ol class="list-inside">
@@ -116,7 +116,7 @@
                 <small class="text-base text-neutral-500 dark:text-neutral-300">/year</small>
               </h3>
   
-              <Button label="buy" class="w-full z-1"></Button>
+              <Button label="BUY" class="w-full flex items-center font-bold justify-center"></Button>
             </div>
             <div class="p-6">
               <ol class="list-inside">
