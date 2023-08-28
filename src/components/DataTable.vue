@@ -33,7 +33,7 @@
             </div>
           </div>
         </div>
-        <Button label="Add new" icon="add" @click="addNew()" class="pe-3"/>
+        <Button label="Add new" icon="add" @click="addNew()" class="pe-3 text-sm"/>
       </div>
       <div class="p-1.5 w-full inline-block align-middle">
         <div class="overflow-auto border rounded-lg max-h-[75vh]">
