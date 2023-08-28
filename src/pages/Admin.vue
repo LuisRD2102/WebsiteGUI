@@ -1,8 +1,6 @@
 <template>
-    <div class="flex-grow">
-        <Sidebar/>
-        <router-view/>
-    </div>
+    <Sidebar @open-sidebar="openSidebar($event)"/>
+    <router-view :class="paddingClass"/>
 </template>
   
 <script>
@@ -19,7 +17,7 @@ export default {
   },
   computed: {
     paddingClass() {
-      return this.isOpened == true ? 'ps-0' : 'ps-[78px]' ;
+      return this.isOpened == false ? 'ps-0' : 'ps-[78px]' ;
     }
   },
   methods: {
@@ -30,20 +28,3 @@ export default {
   }
 };
 </script>
-
-<style scoped>
-.flex {
-  display: flex;
-}
-
-/* Asegúrate de que tu barra lateral tiene un ancho fijo */
-Sidebar {
-  width: 200px; /* Ajusta este valor según tus necesidades */
-}
-
-/* Asegúrate de que tu vista de enrutador se expande para llenar el espacio restante */
-router-view {
-  flex-grow: 1;
-}
-</style>
-

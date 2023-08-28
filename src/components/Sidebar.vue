@@ -26,7 +26,7 @@
           class="bx"
           :class="isOpened ? 'bx-menu-alt-right' : 'bx-menu'"
           id="btn"
-          @click="isOpened = !isOpened"
+          @click="isOpened = !isOpened ; opened()"
         />
       </div>
   
@@ -342,6 +342,9 @@
         },
       },
       methods: {
+        opened() {
+            this.$emit('open-sidebar',this.isOpened);
+        },
         tooltipAttached() {
           const tooltips = document.querySelectorAll('.tooltip')
           tooltips.forEach(tooltip => {
