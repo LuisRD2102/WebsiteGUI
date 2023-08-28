@@ -17,7 +17,6 @@ import Clients from "../pages/Clients.vue"
 import LogIn from "../pages/LogIn.vue"
 import Admin from "../pages/Admin.vue"
 import Proposal from "../pages/Proposal.vue"
-
 import BarChart from "../components/BarChart.vue";
 
 

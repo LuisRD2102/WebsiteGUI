@@ -2,6 +2,7 @@
   <Navbar class="absolute top-0 left-0 right-0 z-10" colorClass="text-white" />
 
   <div class="relative h-[200px] blue-gradient flex items-center min-w-[100vw] justify-center">
+
   </div>
 
   <div class="flex flex-col md:flex-row gap-12 px-6 -translate-y-20 ">
@@ -43,29 +44,38 @@
     </div>
   
     <!-- Details -->
-    <div class="w-full md:w-3/12 rounded-lg bg-white shadow px-6 h-fit flex-shrink-0">
-      <h4 class="text-lg font-semibold text-start pt-3 pb-3 ps-1">Details</h4>
-
-      <div class="flex items-center gap-4 pb-4">
-        <i class="material-icons-outlined c-primary flex justify-center">account_circle</i>
-        <h3 class="text-md font-semibold flex justify-center">Jessica R. Grove</h3>
+    <div class="w-full md:w-3/12 flex-shrink-0">
+      <div class="rounded-lg bg-white shadow px-6 h-fit mb-4">
+        <h4 class="text-lg font-semibold text-start pt-3 pb-3 ps-1">Details</h4>
+    
+        <div class="flex items-center gap-4 pb-4">
+          <i class="material-icons-outlined c-primary flex justify-center">account_circle</i>
+          <h3 class="text-md font-semibold flex justify-center">Jessica R. Grove</h3>
+        </div>
+    
+        <div class="flex items-center gap-4 pb-4">
+          <i class="material-icons-outlined c-primary flex justify-center">location_on</i>
+          <p class="text-md font-semibold flex justify-center">1952 campbell, Kermit, TX 79745</p>        
+        </div>
+    
+        <div class="flex items-center gap-4 pb-4">
+          <i class="material-icons-outlined c-primary flex justify-center">call</i>
+          <p class="text-md font-semibold flex justify-center">(575) 484-4607</p>
+        </div>
+    
+        <div class="flex items-center gap-4 pb-6">
+          <i class="material-icons-outlined c-primary flex justify-center">email</i>
+          <p class="text-md font-semibold flex justify-center">jessicargrove@email.com</p>
+        </div>
       </div>
-
-      <div class="flex items-center gap-4 pb-4">
-        <i class="material-icons-outlined c-primary flex justify-center">location_on</i>
-        <p class="text-md font-semibold flex justify-center">1952 campbell, Kermit, TX 79745</p>        
-      </div>
-
-      <div class="flex items-center gap-4 pb-4">
-        <i class="material-icons-outlined c-primary flex justify-center">call</i>
-        <p class="text-md font-semibold flex justify-center">(575) 484-4607</p>
-      </div>
-
-      <div class="flex items-center gap-4 pb-6">
-        <i class="material-icons-outlined c-primary flex justify-center">email</i>
-        <p class="text-md font-semibold flex justify-center">jessicargrove@email.com</p>
-      </div>
+      
+      <BarChart class="w-full m-0"></BarChart>
+      <!-- <div class="rounded-lg bg-white shadow px-6 h-fit">
+       
+      </div> -->
+    
     </div>
+    
 
   
   </div>
