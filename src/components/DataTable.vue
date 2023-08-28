@@ -36,7 +36,7 @@
         <Button label="Add new" icon="add" @click="addNew()" class="pe-3"/>
       </div>
       <div class="p-1.5 w-full inline-block align-middle">
-        <div class="overflow-auto border rounded-lg h-[75vh]">
+        <div class="overflow-auto border rounded-lg max-h-[75vh]">
           <table class="min-w-full divide-y">
             <thead class="bg-gray-100 sticky top-0">
               <tr>

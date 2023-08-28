@@ -1,6 +1,6 @@
 <template>
   <Sidebar @open-sidebar="openSidebar($event)" />
-  <router-view id="routerView" class="ps-[78px]"/>
+  <router-view id="routerView" class="ps-[78px] h-screen"/>
 </template>
 
 <script>

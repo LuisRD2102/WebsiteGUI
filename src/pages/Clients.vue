@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="p-4">
+    <div class="p-4 max-h-[75vh]">
       <DataTable :items="items" :headers="headers" @add-new="addNew()" />
       <ClientsForm ref="clientsForm" />
     </div>
