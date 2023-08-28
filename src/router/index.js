@@ -15,6 +15,7 @@ import Modal from "../components/Modal.vue";
 import LandingPage from "../pages/LandingPage.vue"
 import Clients from "../pages/Clients.vue"
 import LogIn from "../pages/LogIn.vue"
+import Admin from "../pages/Admin.vue"
 
 
 const routes = [
@@ -28,9 +29,16 @@ const routes = [
     component: LandingPage,
   },
   {
-    path: "/clients",
-    name: "Clients",
-    component: Clients,
+    path: "/admin",
+    name: "Admin",
+    component: Admin,
+    children: [
+      {
+        path: "/clients",
+        name: "Clients",
+        component: Clients,
+      },
+    ]
   },
   {
     path: "/events",

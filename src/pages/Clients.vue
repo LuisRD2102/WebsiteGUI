@@ -14,7 +14,7 @@ import ClientsForm from './ClientsForm.vue';
 export default {
   components: {
     DataTable,
-    ClientsForm
+    ClientsForm,
 },
   methods: {
     addNew() {
