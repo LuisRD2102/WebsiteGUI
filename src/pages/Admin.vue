@@ -1,7 +1,7 @@
 <template>
-    <div class="flex">
-        <Sidebar @open-sidebar="openSidebar($event)"/>
-        <router-view :class="paddingClass"/>
+    <div class="flex-grow">
+        <Sidebar/>
+        <router-view/>
     </div>
 </template>
   
