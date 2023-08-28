@@ -29,7 +29,7 @@
                 animi! Sed, recusandae.
               </p>
               <div class="mt-5">
-                <Button label="Learn More" @click="scrollToElement('myDiv')" class="flex items-center px-3 font-bold"/>
+                <Button label="Learn More" @click="scrollToElement('myDiv')" class="flex items-center px-3 font-md text-sm"/>
               </div>
 
               
