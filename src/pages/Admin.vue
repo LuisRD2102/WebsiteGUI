@@ -1,30 +1,36 @@
 <template>
-    <Sidebar @open-sidebar="openSidebar($event)"/>
-    <router-view :class="paddingClass"/>
+  <Sidebar @open-sidebar="openSidebar($event)" />
+  <router-view id="routerView" class="ps-[78px]"/>
 </template>
-  
+
 <script>
-import Sidebar from '../components/Sidebar.vue'
+import Sidebar from "../components/Sidebar.vue";
 
 export default {
   components: {
-    Sidebar
+    Sidebar,
   },
   data() {
     return {
-      isOpened: false
-    }
+      isOpened: false,
+    };
   },
-  computed: {
-    paddingClass() {
-      return this.isOpened == false ? 'ps-0' : 'ps-[78px]' ;
-    }
+  watch: {
+    isOpened(newValue) {
+      console.log(newValue);
+      const routerView = document.getElementById("routerView");
+      if (routerView) {
+        if (newValue == false || newValue == true ) {
+          routerView.classList.remove("ps-[78px]");
+        } 
+      }
+    },
   },
   methods: {
-    openSidebar($event){
-      console.log($event);
-      this.isOpened = $event
-    }
-  }
+    openSidebar($event) {
+      // console.log($event);
+      this.isOpened = $event;
+    },
+  },
 };
 </script>
