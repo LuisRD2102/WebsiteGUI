@@ -97,7 +97,4 @@ export default {
 
 }
 
-.custom-gradient {
-  background-image: linear-gradient(to right, #f8f4f1, hsla(0,0%,100%,0.55));
-} 
 </style>

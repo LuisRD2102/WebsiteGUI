@@ -16,6 +16,8 @@ import LandingPage from "../pages/LandingPage.vue"
 import Clients from "../pages/Clients.vue"
 import LogIn from "../pages/LogIn.vue"
 import Admin from "../pages/Admin.vue"
+import Proposal from "../pages/Proposal.vue"
+
 
 
 const routes = [
@@ -38,7 +40,13 @@ const routes = [
         name: "Clients",
         component: Clients,
       },
+    
     ]
+  },
+  {
+    path: "/proposal",
+    name: "Proposal",
+    component: Proposal,
   },
   {
     path: "/events",
