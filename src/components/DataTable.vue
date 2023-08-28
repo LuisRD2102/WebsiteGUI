@@ -77,16 +77,20 @@
             </thead>
             <tbody class="bg-white divide-y divide-gray-200">
               <tr v-for="(item, index) in filteredItems" :key="'item-' + index">
-                <td class="px-6 py-3 whitespace-nowrap flex items-center justify-center">
-                  <button class="mr-2">
-                    <i class="material-icons-outlined text-lg text-gray-600" @click="editItem(item)">visibility</i>
+                <td class="px-6 py-3 whitespace-nowrap flex gap-2 items-center justify-center">
+
+                  <button data-tooltip-target="tedit">
+                    <i class="material-icons-outlined text-lg text-gray-600">edit</i>
                   </button>
-                  <button class="mr-2">
-                    <i class="material-icons-outlined text-lg text-gray-600" @click="editItem(item)">edit</i>
-                  </button>
-                  <button @click="deleteItem(item)">
+                  <Tooltip label="Edit" id="tedit"/>
+
+                  <button @click="deleteItem(item)" data-tooltip-target="tdelete">
                     <i class="material-icons-outlined text-lg text-red-500">delete</i>
                   </button>
+                  <Tooltip label="Delete" id="tdelete"/>
+
+                  <slot name="custom-button"></slot>
+
                 </td>
                 <td v-for="(value, key) in item" :key="'value-' + key" class="px-6 py-3 whitespace-nowrap">
                   <div v-if="key === 'Status'">

@@ -1,7 +1,15 @@
 <template>
   <div>
     <div class="p-4 max-h-[75vh]">
-      <DataTable :items="items" :headers="headers" @add-new="addNew()" />
+      <DataTable :items="items" :headers="headers" @add-new="addNew()">
+        <template v-slot:custom-button>
+          <!-- Aquí defines tu botón personalizado con su icono y función -->
+          <button @click="deleteItem(item)" data-tooltip-target="tsell">
+            <i class="material-icons-outlined text-lg text-gray-600">sell</i>
+          </button>
+          <Tooltip label="Proposal" id="tsell"/>
+        </template>
+      </DataTable>
       <ClientsForm ref="clientsForm" />
     </div>
   </div>
@@ -15,7 +23,7 @@ export default {
   components: {
     DataTable,
     ClientsForm,
-},
+  },
   methods: {
     addNew() {
       this.$refs.clientsForm.openModal()

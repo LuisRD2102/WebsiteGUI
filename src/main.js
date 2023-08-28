@@ -6,6 +6,7 @@ import Button from "./components/Button.vue";
 import CardsOverlay from "./components/CardsOverlay.vue";
 import Testimonials from "./components/Testimonial.vue"
 import Location from "./components/Location.vue"
+import Tooltip from "./components/Tooltip.vue"
 
 
 const app = createApp(App);
@@ -13,5 +14,6 @@ app.component("Button", Button);
 app.component("CardsOverlay", CardsOverlay);
 app.component("Testimonials", Testimonials);
 app.component("Location", Location);
+app.component("Tooltip", Tooltip);
 
 app.use(router).mount("#app");
