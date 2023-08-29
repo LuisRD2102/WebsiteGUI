@@ -4,10 +4,12 @@
       <DataTable :items="items" :headers="headers" @add-new="addNew()">
         <template v-slot:custom-button>
           <!-- Aquí defines tu botón personalizado con su icono y función -->
-          <button @click="deleteItem(item)" data-tooltip-target="tsell">
-            <i class="material-icons-outlined text-lg text-gray-600">sell</i>
-          </button>
-          <Tooltip label="Proposal" id="tsell"/>
+          <router-link to="/proposal">
+            <button @click="redireccionar" data-tooltip-target="tsell" >
+              <i class="material-icons-outlined text-lg text-gray-600">sell</i>
+            </button>
+            <Tooltip label="Proposal" id="tsell"/>
+          </router-link>
         </template>
       </DataTable>
       <ClientsForm ref="clientsForm" />
