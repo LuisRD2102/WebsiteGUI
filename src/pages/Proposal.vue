@@ -7,7 +7,7 @@
 
   <div class="flex flex-col md:flex-row gap-12 px-6 -translate-y-20 ">
 
-    <div class="w-full md:w-9/12 rounded-lg bg-white shadow px-3 h-full" >
+    <div class="w-full md:w-9/12 rounded-lg bg-white shadow-lg px-3 h-full" >
 
       <div class="flex justify-between pt-3 pb-3 ps-1">
         <h4 class="text-lg font-semibold text-start ps-4">Solar Design</h4>
