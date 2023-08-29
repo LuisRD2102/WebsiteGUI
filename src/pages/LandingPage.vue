@@ -17,7 +17,7 @@
         <div class="flex h-full items-center justify-center px-5 w-11/12 mx-auto gap-16">
             <div class="md:w-1/3 padding-inline-start mx-auto transform -translate-y-10">
               <h1 class="mb-4 mt-0 text-4xl font-bold c-primary md:text-start ">
-                Solar Panel
+                Solar Design Pro
               </h1>
               <p class="text-gray-700 text-justify text-md">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias iure
