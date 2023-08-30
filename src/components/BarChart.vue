@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full bg-white rounded-lg shadow dark:bg-gray-800 p-4 md:p-6">
+    <div class="w-full bg-white rounded-lg shadow-lg dark:bg-gray-800 p-4 md:p-6">
         <div class="flex pb-4 mb-4 border-b border-gray-200 dark:border-gray-700">
             <div class="w-12 h-12 rounded-lg bg-gray-100 dark:bg-gray-700 flex items-center justify-center mr-3">
                 <i class="material-icons-outlined text-gray-600 text-4xl">bolt</i>
