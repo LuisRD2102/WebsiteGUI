@@ -8,7 +8,7 @@
                 128$
             </div>
             <div class="flex flex-col space-y-2 p-2">
-                <input id="myRange" type="range" class="w-full" min="0" max="60" step="1" />
+                <input id="myRange" type="range" class="w-full" value="0" min="0" max="25" step="5" />
                 <ul id="sliderLabels" class="flex justify-between w-full px-[10px]">
                     <!-- Labels will be inserted here -->
                 </ul>
@@ -49,15 +49,20 @@ window.addEventListener("load", function () {
 });
 
 window.addEventListener("load", function () {
+    const slider = document.getElementById('myRange');
+    const labelsContainer = document.getElementById('sliderLabels');
+    const yourPayment = 172;
+    const currentBill = 120;
+
     const barChartoptions = {
         series: [
             {
                 name: "Current Bill",
-                data: [40]
+                data: [currentBill]
             },
             {
                 name: "Your Payment",
-                data: [80]
+                data: [yourPayment]
             }
         ],
         colors: ["#1A56DB", "#FDBA8C"],
@@ -89,6 +94,33 @@ window.addEventListener("load", function () {
 
     const barChart = new ApexCharts(document.querySelector("#bar-chart"), barChartoptions);
     barChart.render();
+
+    // Update the bar chart when the slider value changes
+    slider.addEventListener('change', function () {
+    const year = parseInt(slider.value);
+    let costPerKWh;
+    if (year == 0) {
+        costPerKWh = 0.247;
+    } else if (year == 5) {
+        costPerKWh = 0.301;
+    } else if (year == 10) {
+        costPerKWh = 0.366;
+    } else if (year == 15) {
+        costPerKWh = 0.445;
+    } else if (year == 20) {
+        costPerKWh = 0.542;
+    } else if (year == 25) {
+        costPerKWh = 0.659;
+    }
+
+    const billPerMonth = Math.round(costPerKWh * 486); // Consumo mensual en kWh
+
+    // Update the series data
+    barChart.updateSeries([
+        { name: "Current Bill", data: [billPerMonth] },
+        { name: "Your Payment", data: [yourPayment] }
+    ]);
+});
 
     const pieChartOptions = {
     series: [30,76],
