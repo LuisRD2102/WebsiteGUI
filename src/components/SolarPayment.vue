@@ -1,34 +1,58 @@
 <template>
-    <div class="grid grid-cols-4 gap-4">
-        <div>
-            <div>
-                Your current bill
+    
+    <div class="flex justify-between pt-3 ps-1">
+        <h4 class="text-lg font-semibold text-start ps-4">Your Solar Payment </h4>
+        <h4 class="text-md font-semibold text-start text-white rounded-lg bg-primary px-4 my-auto">$ 174<sup>*</sup></h4>
+    </div>
+    
+
+    <div class="ps-1 pb-6">
+       <p class="ps-4 text-sm font-semibold">New utility bill 0$</p> 
+       <small class="ps-4 text-xsm font-semibold">Avg 25 year per cost solar kWh: $0.032 kWh</small>       
+
+    </div>
+
+    
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pb-3">     
+        <div class="w-full border-gray-200 border-r">
+            <div class="ps-1 pb-3 pt-12">
+                <p class="text-center text-sm font-semibold">Your current bill <span class="c-primary">128$</span></p>
+             
             </div>
-            <div>
-                128$
-            </div>
-            <div class="flex flex-col space-y-2 p-2">
+            <div class="flex flex-col space-y-2 p-2 px-3">
                 <input id="myRange" type="range" class="w-full" value="0" min="0" max="25" step="5" />
                 <ul id="sliderLabels" class="flex justify-between w-full px-[10px]">
                     <!-- Labels will be inserted here -->
                 </ul>
             </div>
-            <div class="pt-4">Current cost per kWh: $0.023/kWh</div>
+            <div class="ps-1 pb-3 pt-8">
+                <p class="text-center text-sm font-semibold">Current cost per kWh: $0.023/kWh</p>                
+            </div>
+
+            <div class="pt-6 w-full">
+                <div class="pt-4 w-full ps-1">
+                    <p class="text-center text-sm font-semibold pb-2">25-year saving</p>                
+                </div>
+                <div class=" w-full text-center flex justify-center items-center">
+                    <h4 class="text-md font-semibold text-start text-white bg-primary my-auto px-4 rounded-lg ">8.231$</h4>              
+                </div>
+            </div>
+         
         </div>
-        <div id="bar-chart"></div>
-        <div style="position: relative;">
-            <div id="pie-chart"></div>
-            <div class="text-center">Solar offset 125%</div>
+        <div id="bar-chart" class="w-full "></div>
+        <div style="position: relative;" class="w-full flex justify-center">
+            <div class="w-full">
+                <div id="pie-chart"></div>
+                <!-- <div class="text-center">Solar offset 125%</div> -->
+                <p class="text-center text-sm font-semibold">Solar offset 125%</p>    
+            </div>
+            
             <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div>
         </div>
-        <div>
-            <div>Your solar payment 174$</div>
-            <div>New utility bill 0$</div>
-            <div>Avg 25 year per cost solar kWh: $0.032 kWh</div>
-            <div class="pt-4">25-year saving</div>
-            <div class="bg-primary">8.231$</div>
-        </div>
+  
     </div>
+    
 </template>
 
 <script setup>
@@ -78,7 +102,7 @@ window.addEventListener("load", function () {
                 horizontal: false,
                 columnWidth: "50%",
                 borderRadiusApplication: "end",
-                borderRadius: 20,
+                borderRadius: 45,
             }
         },
         grid: {
@@ -88,7 +112,7 @@ window.addEventListener("load", function () {
             enabled: false
         },
         xaxis: {
-            categories: ['bill'],
+            categories: ['Bill'],
         }
     };
 
@@ -126,6 +150,8 @@ window.addEventListener("load", function () {
     series: [30,76],
     chart: {
         type: 'pie',
+        height: 325,
+
     },
     colors: ["#1A56DB", "#FDBA8C"],
     legend: {
@@ -138,7 +164,7 @@ window.addEventListener("load", function () {
         breakpoint: 480,
         options: {
             chart: {
-                width: 200
+                width: 325
             }
         }
     }]
