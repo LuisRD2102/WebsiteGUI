@@ -8,6 +8,7 @@ import Testimonials from "./components/Testimonial.vue"
 import Location from "./components/Location.vue"
 import Tooltip from "./components/Tooltip.vue"
 import BarChart from "./components/BarChart.vue";
+import SolarPayment from "./components/SolarPayment.vue";
 
 
 
@@ -18,5 +19,6 @@ app.component("Testimonials", Testimonials);
 app.component("Location", Location);
 app.component("Tooltip", Tooltip);
 app.component("BarChart", BarChart);
+app.component("SolarPayment", SolarPayment);
 
 app.use(router).mount("#app");
