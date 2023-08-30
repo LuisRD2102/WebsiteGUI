@@ -151,7 +151,7 @@
         },
         menuTitle: {
           type: String,
-          default: 'Akahon',
+          default: 'Logo',
         },
         menuLogo: {
           type: String,
@@ -232,7 +232,7 @@
         //! Search
         isSearch: {
           type: Boolean,
-          default: true,
+          default: false,
         },
         searchPlaceholder: {
           type: String,

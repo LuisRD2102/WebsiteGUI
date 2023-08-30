@@ -76,7 +76,7 @@ window.addEventListener("load", function () {
                 horizontal: false,
                 columnWidth: "70%",
                 borderRadiusApplication: "end",
-                borderRadius: 8,
+                borderRadius: 12,
             },
         },
         tooltip: {
