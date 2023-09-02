@@ -35,13 +35,9 @@
           </div>
         </div>
 
-        <iframe
-          src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed"
-          class="left-0 top-0 h-full w-full rounded-lg lg:rounded-tr-none lg:rounded-bl-lg pb-3"
-          style="height: 400px;"
-          frameborder="0"
-          allowfullscreen
-        ></iframe>
+        <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed"
+          class="left-0 top-0 h-full w-full rounded-lg lg:rounded-tr-none lg:rounded-bl-lg pb-3" style="height: 400px;"
+          frameborder="0" allowfullscreen></iframe>
       </div>
 
       <div class="rounded-lg bg-white shadow-lg px-3 mb-4">
@@ -80,7 +76,12 @@
         </div>
       </div>
 
-      <BarChart class="w-full m-0"></BarChart>
+      <BarChart class="w-full m-0 mb-4"></BarChart>
+
+      <div class="rounded-lg bg-white shadow-lg px-6 h-fit mb-4">
+        <StepsProcess class="pt-3"></StepsProcess>
+      </div>
+
     </div>
   </div>
 </template>
@@ -90,7 +91,7 @@ import Navbar from '../components/Navbar.vue';
 export default {
   components: {
     Navbar,
-},
+  },
 };
 </script>
 
