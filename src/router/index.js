@@ -19,6 +19,7 @@ import Admin from "../pages/Admin.vue"
 import Proposal from "../pages/Proposal.vue"
 import BarChart from "../components/BarChart.vue";
 import SolarPayment from "../components/SolarPayment.vue";
+import StepsProcess from "../components/StepsProcess.vue";
 
 
 const routes = [
@@ -58,6 +59,11 @@ const routes = [
     path: "/solarPayments",
     name: "SolarPayments",
     component: SolarPayment,
+  },
+  {
+    path: "/steps",
+    name: "Steps",
+    component: StepsProcess,
   },
   {
     path: "/barchart",
