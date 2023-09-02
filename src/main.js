@@ -10,6 +10,7 @@ import Tooltip from "./components/Tooltip.vue"
 import BarChart from "./components/BarChart.vue";
 import SolarPayment from "./components/SolarPayment.vue";
 import StepsProcess from "./components/StepsProcess.vue";
+import Incentive from "./components/Incentive.vue";
 
 
 
@@ -22,5 +23,6 @@ app.component("Tooltip", Tooltip);
 app.component("BarChart", BarChart);
 app.component("SolarPayment", SolarPayment);
 app.component("StepsProcess", StepsProcess);
+app.component("Incentive", Incentive);
 
 app.use(router).mount("#app");

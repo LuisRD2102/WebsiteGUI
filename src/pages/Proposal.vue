@@ -44,8 +44,13 @@
         ></iframe>
       </div>
 
-      <div class="rounded-lg bg-white shadow-lg px-3">
+      <div class="rounded-lg bg-white shadow-lg px-3 mb-4">
         <SolarPayment></SolarPayment>
+      </div>
+
+      <!-- Incentive -->
+      <div class="rounded-lg bg-white shadow-lg px-3 mb-4">
+        <Incentive></Incentive>
       </div>
     </div>
 
@@ -85,7 +90,7 @@ import Navbar from '../components/Navbar.vue';
 export default {
   components: {
     Navbar,
-  },
+},
 };
 </script>
 
