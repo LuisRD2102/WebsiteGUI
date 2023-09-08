@@ -16,8 +16,7 @@
           </div>
           <div class="h-9 flex items-center space-x-2">
             <div class="relative">
-              <button
-                class="relative z-0 inline-flex text-sm rounded-md shadow-sm hover:bg-gray-50">
+              <button class="relative z-0 inline-flex text-sm rounded-md shadow-sm hover:bg-gray-50">
                 <span
                   class="h-9 relative inline-flex items-center px-3 py-3 space-x-2 text-sm font-medium text-gray-600 bg-white border border-gray-300 rounded-md sm:py-2">
                   <div>
@@ -33,7 +32,7 @@
             </div>
           </div>
         </div>
-        <Button label="Add new" icon="add" @click="addNew()" class="pe-3 text-sm"/>
+        <Button label="Add new" icon="add" @click="addNew()" class="pe-3 text-sm" />
       </div>
       <div class="p-1.5 w-full inline-block align-middle">
         <div class="overflow-auto border rounded-lg max-h-[75vh]">
@@ -82,12 +81,12 @@
                   <button data-tooltip-target="tedit">
                     <i class="material-icons-outlined text-lg text-gray-600">edit</i>
                   </button>
-                  <Tooltip label="Edit" id="tedit"/>
+                  <Tooltip label="Edit" id="tedit" />
 
-                  <button @click="deleteItem(item)" data-tooltip-target="tdelete">
+                  <button @click="openDeleteModal(index)" data-tooltip-target="tdelete">
                     <i class="material-icons-outlined text-lg text-red-500">delete</i>
                   </button>
-                  <Tooltip label="Delete" id="tdelete"/>
+                  <Tooltip label="Delete" id="tdelete" />
 
                   <slot name="custom-button"></slot>
 
@@ -112,14 +111,24 @@
       </div>
     </div>
   </div>
+  <!-- Modals -->
+  <ConfirmationModal @confirm="deleteItem" ref="alertModal" :modal-text="'Are you sure you want to delete this product?'"
+    :yes-button-text="'Yes'" :no-button-text="'Cancel'">
+  </ConfirmationModal>
+  <ActionCompleteModal ref="completedActionModal" :modal-text="'The client has been deleted.'">
+  </ActionCompleteModal>
 </template>
 
 <script>
-import Paginator from '../components/Paginator.vue';
+import Paginator from './Paginator.vue';
+import ConfirmationModal from './ConfirmationModal.vue';
+import ActionCompleteModal from './ActionCompleteModal.vue';
 
 export default {
   components: {
     Paginator,
+    ConfirmationModal,
+    ActionCompleteModal
 },
   props: {
     items: {
@@ -138,6 +147,7 @@ export default {
       sortAsc: false,
       currentPage: 1,
       itemsPerPage: 10,
+      selectedItem: null
     };
   },
   computed: {
@@ -159,8 +169,17 @@ export default {
     }
   },
   methods: {
-    addNew(){
+    addNew() {
       this.$emit('add-new');
+    },
+    openDeleteModal(index) {
+      this.selectedItem = index;
+      this.$refs.alertModal.openModal();
+    },
+    deleteItem() {
+      this.items.splice(this.selectedItem, 1);
+      this.$refs.completedActionModal.openModal();
+      this.selectedItem = null;
     },
     sortTable(index) {
       if (this.sortOrder === index) {

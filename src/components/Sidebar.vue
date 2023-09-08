@@ -405,7 +405,7 @@
       width: 78px;
       background: var(--bg-color);
       /* padding: 6px 14px 0 14px; */
-      z-index: 99;
+      z-index: 40;
       transition: all 0.5s ease;
     }
     .sidebar.open {

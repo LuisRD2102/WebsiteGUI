@@ -11,6 +11,8 @@ import BarChart from "./components/BarChart.vue";
 import SolarPayment from "./components/SolarPayment.vue";
 import StepsProcess from "./components/StepsProcess.vue";
 import Incentive from "./components/Incentive.vue";
+import ConfirmationModal from "./components/ConfirmationModal.vue";
+import ActionCompleteModal from "./components/ActionCompleteModal.vue";
 
 
 
@@ -24,5 +26,7 @@ app.component("BarChart", BarChart);
 app.component("SolarPayment", SolarPayment);
 app.component("StepsProcess", StepsProcess);
 app.component("Incentive", Incentive);
+app.component("ConfirmationModal", ConfirmationModal);
+app.component("ActionCompleteModal", ActionCompleteModal);
 
 app.use(router).mount("#app");
